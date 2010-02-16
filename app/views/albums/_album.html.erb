@@ -1,0 +1,35 @@
+
+
+
+
+<div class='album'>
+	
+	<div class="album_heading">
+		<div class="sorter">
+			sort
+		</div>
+		<span class='header'>	Albums  </span>
+	<span class="paginate">
+		<%#=will_paginate @albums %>
+		</span>
+		
+	</div>
+		<% @albums.each do |album|%>
+
+	<div class='small_album'>
+
+			<div class='small_cover'>
+				<%= image_tag album.photo.url%>
+				
+				</div>
+			<div class='album_title'>
+							<%=h album.name %>
+			</div>
+	</div>
+	<%end%>
+	
+	<div class= 'float_fix'>&nbsp;
+		
+	</div>
+	
+</div>

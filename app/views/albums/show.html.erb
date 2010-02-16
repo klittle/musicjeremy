@@ -1,0 +1,28 @@
+<h1>List Albums</h1>
+
+<%= start_form_tag(:action => 'show_formdata') %>
+
+<p>Select Way to Sort:
+	
+<% items = ["a-z", "z-a"].map do |item|
+	"<option>#{item}</option>"
+	end.to_s %>
+	
+
+
+
+
+<%= render (:partial => 'album') %>
+
+<%# @albums.each do |album| %>
+  <p><%#= link_to album.name, album %></p>
+<%# end %>
+
+
+<%= link_to "new album", new_album_path %>
+
+
+</p>
+<%= submit_tag("Submit Form") %>
+<%= end_form_tag %>
+

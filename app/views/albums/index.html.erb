@@ -1,0 +1,17 @@
+<h1>List Albums</h1>
+<%= render (:partial => 'album') %>
+
+<%# @albums.each do |album| %>
+  <p><%#= link_to album.name, album %></p>
+<%# end %>
+
+
+<%#= link_to "new album", new_album_path %>
+
+albums_path()
+<%= link_to "list albums", {:controller => 'albums', :action => 'index'} %>
+<%= link_to "Add albums", {:controller => 'albums', :action => 'new'} %>
+<%#= link_to "paint albums", {:controller => 'albums', :action => 'edit'} %>
+<%#= link_to "show albums", {:controller => 'albums', :action => 'show'} %>
+
+<%#= link_to "show albums", {:controller => 'albums', :action => 'show_formdata'} %>
